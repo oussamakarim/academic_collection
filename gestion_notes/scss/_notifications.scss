@@ -1,0 +1,48 @@
+.notifications button{
+  background: transparent;
+  border: none;
+  outline: none;
+  position: absolute;
+  left: -70px;
+  top: 10px;
+}
+.notifications {
+  width: 400px;
+  height: 500x;
+  margin: 60px auto;
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  background-color: #E8E7FE;
+  border: 10px solid #BCCFFF;
+  border-radius: 7px;
+}
+
+.notifications .header {
+  flex: 2 0 100px;
+  background-color: #c7d7fc;
+}
+
+.notifications .header h1 {
+  text-transform: uppercase;
+  font-weight: 700;
+  text-align: center;
+}
+
+.notifications .body {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+.notifications ul {
+  max-height: 350px !important;
+  overflow-y: scroll;
+}
+
+.notifications li {
+  background-color: transparent !important;
+  text-transform: capitalize;
+  font-size: 14px;
+  font-weight: 700;
+}

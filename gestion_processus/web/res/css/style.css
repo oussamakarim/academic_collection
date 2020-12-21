@@ -1,0 +1,15 @@
+@charset "UTF-8";
+
+.card {
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+a.card:hover {
+    text-decoration: none;
+}
+
+.card form {
+	flex-grow: 2;
+}

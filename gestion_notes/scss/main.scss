@@ -1,0 +1,28 @@
+@import "_navbar";
+@import "_profile";
+@import "_publish";
+@import "_sidebar";
+@import "_notifications";
+
+html,body {
+    // background: linear-gradient(135deg, #044f48, #2a7561);
+    background-color: #e8e7fe;
+    background-size: cover;
+}
+
+thead {
+    @include main-text-style;
+    border: 3px solid black;
+}
+tbody{
+    border: 2px solid black;
+    td {
+        border: 1px solid black !important;
+    }
+}
+
+
+.half2 a {
+    text-decoration: none;
+    color: black !important;
+}

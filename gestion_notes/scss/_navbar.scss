@@ -1,0 +1,57 @@
+@import "_variables";
+@import "_mixins";
+
+nav {
+    background-color: #DDE4F8 !important;
+    // override bootstrap
+    a {
+        color:rgb(33, 33, 33) !important;
+        text-transform: uppercase !important;
+        font-size: 14px;
+        font-weight: 700;
+    }
+    a:hover {
+        color: rgba(33, 33, 33, 0.6) !important;
+    }
+
+    // style logout button
+    li:last-child {
+        background-color: #04d3ab !important;
+        border-radius: 7px !important;
+        margin-left: 10px !important;
+        a {
+            color: white !important;
+        }
+    }
+    li:last-child:hover {
+        background-color: #5BDACA !important;
+    }
+}
+
+.searchbar {
+    display: flex;
+    align-items: center; // center searchbar 
+    input {
+        background: #EFF2FA;
+        border: 0;
+        border-radius: 4px;
+        outline: none;
+        color: black;
+        padding-left: 4px;
+        font-size: 14px;
+        font-weight: 700;
+    }
+    input::placeholder {
+        color: rgba(0, 0,0, 0.5);
+        text-transform: capitalize;
+    }
+}
+
+
+div.filter-bar {
+    input {
+        display: inline-block;
+        height: 100%;
+    }
+}
+

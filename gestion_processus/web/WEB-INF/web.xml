@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="http://java.sun.com/xml/ns/javaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://java.sun.com/xml/ns/javaee
+		  http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
+         version="3.0">
+
+    <servlet>
+        <servlet-name>LoginServlet</servlet-name>
+        <servlet-class>servlet.LoginServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>LoginServlet</servlet-name>
+        <url-pattern>/login</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>LogOut</servlet-name>
+        <servlet-class>servlet.filter.LogOut</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>LogOut</servlet-name>
+        <url-pattern>/logout</url-pattern>
+    </servlet-mapping>
+
+
+    <servlet>
+        <servlet-name>FollowDemande</servlet-name>
+        <servlet-class>servlet.FollowDemande</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>FollowDemande</servlet-name>
+        <url-pattern>/follow</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>CreateDemande</servlet-name>
+        <servlet-class>servlet.CreateDemande</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>CreateDemande</servlet-name>
+        <url-pattern>/create</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>HomeServlet</servlet-name>
+        <servlet-class>servlet.HomeServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>HomeServlet</servlet-name>
+        <url-pattern>/home</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>EmployeServlet</servlet-name>
+        <servlet-class>servlet.employe.EmployeServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>EmployeServlet</servlet-name>
+        <url-pattern>/employe</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>ChefServlet</servlet-name>
+        <servlet-class>servlet.chef.ChefServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ChefServlet</servlet-name>
+        <url-pattern>/chef</url-pattern>
+    </servlet-mapping>
+    <!--API-->
+    <servlet>
+        <servlet-name>ApiEtape</servlet-name>
+        <servlet-class>servlet.api.ApiEtape</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ApiEtape</servlet-name>
+        <url-pattern>/api/etape/*</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>JustifierRapport</servlet-name>
+        <servlet-class>servlet.JustifierRapport</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>JustifierRapport</servlet-name>
+        <url-pattern>/JustifierRapport</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>ApiCatEtape</servlet-name>
+        <servlet-class>servlet.api.ApiCatEtape</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ApiCatEtape</servlet-name>
+        <url-pattern>/api/catalogueetape/*</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>apiassignmentetape</servlet-name>
+        <servlet-class>servlet.api.ApiEtapeAssignment</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>apiassignmentetape</servlet-name>
+        <url-pattern>/api/assignment</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>apidemandevalidation</servlet-name>
+        <servlet-class>servlet.api.ApiDemandeValidation</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>apidemandevalidation</servlet-name>
+        <url-pattern>/api/demande/validation</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>apidemandeuploadfile</servlet-name>
+        <servlet-class>servlet.api.ApiDemandeFileUpload</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>apidemandeuploadfile</servlet-name>
+        <url-pattern>/uploadfile</url-pattern>
+    </servlet-mapping>
+    <!--  Filter  -->
+    <filter>
+        <filter-name>SessionInterceptor</filter-name>
+        <filter-class>servlet.filter.SessionInterceptor</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>SessionInterceptor</filter-name>
+        <url-pattern>/employe</url-pattern>
+    </filter-mapping>
+    <filter-mapping>
+        <filter-name>SessionInterceptor</filter-name>
+        <url-pattern>/chef</url-pattern>
+    </filter-mapping>
+<!--    <filter-mapping>-->
+<!--        <filter-name>SessionInterceptor</filter-name>-->
+<!--        <url-pattern>/api/etape</url-pattern>-->
+<!--    </filter-mapping>-->
+</web-app>
